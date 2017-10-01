@@ -12,7 +12,7 @@ namespace Spel
         {
             Room mainHall = new Room("Main hall", "There are two doors, to the west, and east. The door to the east is locked.");
 
-            Room library = new Room("The library", "You see a big old library, there are lots of dusty bookshelves and you see a small item lying on the floor.\nIt looks like a broken-key. There is a shotgun in the corner. At the north end of the library you can see \nstairs to the seccond floor.");
+            Room library = new Room("The library", "You see a big old library, there are lots of dusty bookshelves and you see a small item lying on the floor.\nIt looks like a broken-key. There is a shotgun in the corner. At the north end of the library you can see \nstairs to the second floor.");
             library.items.Add(new Item("shotgun", "It looks heavy"));
             library.items.Add(new Item("broken-key", "lower piece of a key"));
 
@@ -38,11 +38,13 @@ namespace Spel
             Player.CurrentLocation = mainHall;
 
 
-            Console.WriteLine("Game -The dark scary house with a monster");
+            Console.WriteLine("MONSTER INVASION - the last redemption");
             Console.Write("Enter your name: ");
             Player.Name = Console.ReadLine();
 
-            Console.WriteLine("Ok " + Player.Name + ". You just woke up in a dark hallway in what looks like a big house. You are suffering from memory loss.");
+            Console.WriteLine("POLICE RADIO: Ok " + Player.Name + ". The city hall has been taken by an monster like creature \n and is keeping the mayor hostage.\n You have been trusted to get the mayor out safe and sound.. \n" +
+                              "THERE IS NO TIME TOO SHOW FEAR NOW LIEUTENANT!");
+            Console.WriteLine();
 
             while (Player.keepPlaying)
             {
