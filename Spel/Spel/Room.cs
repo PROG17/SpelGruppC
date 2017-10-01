@@ -10,7 +10,6 @@ namespace Spel
     {
         public string RoomName { get; set; }
         public string Description { get; set; }
-        public int MyProperty { get; set; }
         public List<Door> door = new List<Door>();
         public List<Item> items = new List<Item>();
         public List<Exit> exits = new List<Exit>();
