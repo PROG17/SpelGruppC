@@ -142,7 +142,25 @@ namespace Spel
                 Console.Clear();
                 Console.WriteLine(CurrentLocation.Description);
             }
-            else Console.WriteLine("Invalid input, try again");
+            else if (usedKeywords[0] == "inventory")
+            {
+               
+                for (int i = 0; i < Inventory.Count; i++)
+                {
+                    if (Inventory.Count > 0)
+                    {
+                        Console.WriteLine("Inventory: \n" + Inventory[i].Name);
+
+                    }
+                }
+                if (Inventory.Count == 0)
+                {
+                    Console.WriteLine("Inventory: \nEmpty");
+                }
+                    
+                
+            }
+            else  {Console.WriteLine("Invalid input, try again");}
 
         }
         public static void ShowActions()
@@ -150,5 +168,7 @@ namespace Spel
             Console.WriteLine("Available Actions: \n -Look\n -Go \\north\\south\\east\\west " +
                               "\n -Inspect(item) \n -Take (item) \n -Drop (item) \n -Use (item) On (item\\door)");
         }
+
+        
     }
 }
