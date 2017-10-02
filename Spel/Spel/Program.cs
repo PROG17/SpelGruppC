@@ -16,7 +16,7 @@ namespace Spel
             library.items.Add(new Item("shotgun", "It looks heavy"));
             library.items.Add(new Item("broken-key", "lower piece of a key"));
 
-            Room seccondFloor = new Room("Seccond floor", "The room is dark. There is a dusty table in the middle of the room, you see a small item lying on it,\nit looks like a broken-key. There are no other exits other than the stairs to the west leading back to the library.");
+            Room seccondFloor = new Room("Second floor", "The room is dark. There is a dusty table in the middle of the room, you see a small item lying on it,\nit looks like a broken-key. There are no other exits other than the stairs to the west leading back to the library.");
             seccondFloor.items.Add(new Item("broken-key", "upper piece of a key"));
             seccondFloor.items.Add(new Item("shotgun", "Contains a shotgun"));
 
@@ -42,15 +42,22 @@ namespace Spel
             Console.Write("Enter your name: ");
             Player.Name = Console.ReadLine();
 
-            Console.WriteLine("POLICE RADIO: Ok " + Player.Name + ". The city hall has been taken by an monster like creature \n and is keeping the mayor hostage.\n You have been trusted to get the mayor out safe and sound.. \n" +
+            Console.WriteLine();
+            Console.WriteLine("POLICE RADIO: Ok " + Player.Name + ". The city hall has been taken by an monster like creature \nand it is keeping the mayor hostage. You have been trusted to get the mayor out safe and sound.. \n"+
                               "THERE IS NO TIME TOO SHOW FEAR NOW LIEUTENANT!");
             Console.WriteLine();
 
             while (Player.keepPlaying)
             {
-                Player.ShowActions();
-                Console.Write("What is your action?: ");
+                //Player.ShowActions();
+                Console.WriteLine();
+                Console.WriteLine("What is your next action? ");
+                Console.WriteLine();
+                Console.WriteLine();
                 Player.Action(Console.ReadLine().ToLower());
+                
+
+
             }
             Console.ReadLine();
         }

@@ -87,7 +87,7 @@ namespace Spel
                                 {
                                     haveShotgun = true;
                                     Console.WriteLine("Good thing your carried that heavy shotgun around. \nThe monster is rampaging " +
-                                                      "against you. \nLocked n' Loaded: PANG!!! PANG!!! you killed the monster...\nPOLICE RADIO: Nice job lituenant, you saved the mayor and killed the monster. \nYou are truely a hero among men... YOU WIN!");
+                                                      "against you. \nLocked n' Loaded: PANG!!! PANG!!! you killed the monster...\n POLICE RADIO: Nice job lituenant, you saved the mayor and killed the monster. \nYou are truely a hero among men... YOU WIN!");
                                     keepPlaying = false;
                                 }
                             }
@@ -149,25 +149,31 @@ namespace Spel
                 {
                     if (Inventory.Count > 0)
                     {
-                        Console.WriteLine("Inventory: \n" + Inventory[i].Name);
+                        
+                        Console.WriteLine("item: " +Inventory[i].Name);
 
                     }
                 }
                 if (Inventory.Count == 0)
                 {
-                    Console.WriteLine("Inventory: \nEmpty");
+                    Console.WriteLine("Empty");
                 }
                     
                 
             }
+            else if (usedKeywords[0] == "actions")
+            {
+                Console.WriteLine("Available Actions: \n -Look\n -Go \\north\\south\\east\\west " +
+                                  "\n -Inspect(item) \n -Take (item) \n -Drop (item) \n -Use (item) On (item\\door)");
+            }
             else  {Console.WriteLine("Invalid input, try again");}
 
         }
-        public static void ShowActions()
-        {
-            Console.WriteLine("Available Actions: \n -Look\n -Go \\north\\south\\east\\west " +
-                              "\n -Inspect(item) \n -Take (item) \n -Drop (item) \n -Use (item) On (item\\door)");
-        }
+        //public static void ShowActions()
+        //{
+        //    Console.WriteLine("Available Actions: \n -Look\n -Go \\north\\south\\east\\west " +
+        //                      "\n -Inspect(item) \n -Take (item) \n -Drop (item) \n -Use (item) On (item\\door)");
+        //}
 
         
     }
